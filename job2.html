@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>HIRETECH JUNCTION</h1>
+        <h2>Find your next tech job here</h2>
+    </header>
+
+    <br />
+    <br />
+
+    <section>
+        <h3> DATA ANALYST</h3>
+        <h4> MIMECAST </h4>
+
+        <br />
+
+        <ul>
+            <li>Salary: R100 000 p/a</li>
+            <li>Experience Level: Intermiadiate</li>
+            <li>Location: Cape Town, South Africa</li>
+            <li>Posted: 12 April 2024</li>
+          
+        </ul>
+
+        <h4>  <p id="job2-countdown"></p> </h4>
+
+        <p>
+            As a Middle Management Data Analyst at Mimecast, you will play a critical role in driving data-driven decision-making 
+            processes and insights to support strategic initiatives across the organization. You will work closely with
+       cross-functional teams including marketing, sales, product development, and finance to analyze complex data sets,
+            extract actionable insights, and communicate findings to key stakeholders.<br />
+
+
+            <ul>
+                <h4> DESIRED SKILLS</h4>
+                <li>Must have 1 -2 years' good SQL skills</li>
+                <li>Must be able to build SQL tables</li>
+                <li>Dashboards and visual presentation</li>
+                <li>Able to write SQL queries</li>
+         
+            </ul>
+
+
+
+            <h5>Why Mimecast:</h5>
+
+
+            Mimecast offers a dynamic and collaborative work environment where you can make a real impact on the cybersecurity landscape. You will have the opportunity to work with cutting-edge technologies and talented professionals who are passionate about protecting organizations from email-borne threats. If you're looking for a challenging role where you can leverage your analytical skills to drive strategic decision-making, we'd love to hear from you!
+        </p>
+
+        <button>Apply for Job</button>
+    </section>
+
+    <script>
+
+        const dueDate = new Date('May 1, 2024 20:00:00').getTime();
+
+
+        const countdown = setInterval(function () {
+
+            const now = new Date().getTime();
+
+
+            const timeRemaining = dueDate - now;
+
+
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+
+            document.getElementById('job2-countdown').innerHTML = `Time remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+
+            if (timeRemaining < 0) {
+                clearInterval(countdown);
+                document.getElementById('job2-countdown').innerHTML = 'Application closed';
+            }
+        }, 1000);
+    </script>
+
+
+</body>
+</html>

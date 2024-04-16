@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <h1>HIRETECH JUNCTION</h1>
+        <h2>Find your next tech job here</h2>
+    </header>
+
+    <br />
+    <br />
+
+    <section>
+        <h3> FULL STACK JAVA DEVELOPER</h3>
+        <h4> GOOGLE </h4>
+
+        <br />
+
+        <ul>
+            <li>Salary: R120 000 p/a</li>
+            <li>Experience Level: Senior</li>
+            <li>Location: Johannesburg, South Africa</li>
+            <li>Posted: 10 April 2024</li>
+   
+        </ul>
+
+        <h4><p id="job1-countdown"></p></h4>
+
+        <p>
+            As a Senior Full Stack Developer at Google, you will play a key role in designing, developing, and maintaining 
+            scalable web applications and services that power various Google products and services. You will work closely 
+            with cross-functional teams including product managers, designers, and other engineers to deliver high-quality 
+            solutions that meet user needs and business requirements. <br />
+
+
+            <ul>
+                <h4> DESIRED SKILLS</h4>
+                <li>Web Development</li>
+                <li>SQL</li>
+                <li>Version control knowledge</li>
+                <li>Visual Studio</li>
+          
+            </ul>
+
+            <h5>Why Google:</h5>
+
+            Google offers a dynamic and collaborative work environment where you can make a real impact on millions of users worldwide. You will have the opportunity to work on cutting-edge technologies and solve complex challenges at scale while being supported by a talented and diverse team.
+
+            If you're passionate about building innovative web applications and thrive in a fast-paced environment, we'd love to hear from you!
+
+        </p>
+
+        <button>Apply for Job</button>
+    </section>
+
+    <script>
+      
+        const dueDate = new Date('April 26, 2024 20:00:00').getTime();
+
+   
+        const countdown = setInterval(function () {
+          
+            const now = new Date().getTime();
+
+ 
+            const timeRemaining = dueDate - now;
+
+        
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+           
+            document.getElementById('job1-countdown').innerHTML = `Time remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    
+            if (timeRemaining < 0) {
+                clearInterval(countdown);
+                document.getElementById('job1-countdown').innerHTML = 'Application closed';
+            }
+        }, 1000);
+    </script>
+
+
+</body>
+</html>

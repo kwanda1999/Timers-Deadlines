@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <h1>HIRETECH JUNCTION</h1>
+        <h2>Find your next tech job here</h2>
+    </header>
+
+    <br />
+    <br />
+
+    <section>
+        <h3> AGILE PROJECT MANAGER</h3>
+        <h4> MICROSOFT </h4>
+
+        <br />
+
+        <ul>
+            <li>Salary: R100 000 p/a</li>
+            <li>Experience Level: Intermiadiate</li>
+            <li>Location: Remote </li>
+            <li>Posted: 13 April 2024</li>
+      
+        </ul>
+
+        <h4>  <p id="job3-countdown"></p> </h4>
+
+        <p>
+            Our client is a global leader in digital marketing and client reporting solutions, empowering financial professionals to enhance investor engagement and retention. With operations spanning four continents, they are rapidly expanding their team worldwide. Serving top-tier clients in the fintech sector, they seek individuals passionate about technical R&D and solution design, offering remote work opportunities.
+
+
+            <ul>
+                <h4> DESIRED SKILLS</h4>
+                <li>Agile Project Manager</li>
+                <li>SaaS</li>
+                <li>Agile</li>
+           
+            </ul>
+
+            <h5>Why Microsoft:</h5>
+
+
+            Microsoft is at the forefront of innovation, empowering individuals and organizations worldwide to achieve more through technology. As an Agile Project Manager at Microsoft, you'll have the opportunity to work with some of the brightest minds in the industry and play a pivotal role in delivering cutting-edge solutions that transform the way people work and live. Microsoft's commitment to diversity, inclusion, and continuous learning creates an environment where you can thrive and grow both personally and professionally. With a rich ecosystem of products and services spanning cloud computing, artificial intelligence, productivity tools, and more, Microsoft offers endless opportunities to make a meaningful impact and shape the future of technology. If you're passionate about driving positive change and delivering value to customers through Agile practices, Microsoft is the perfect place to bring your skills and expertise to the next level.
+        </p>
+
+        <button>Apply for Job</button>
+    </section>
+
+    <script>
+
+        const dueDate = new Date('May 6, 2024 20:00:00').getTime();
+
+
+        const countdown = setInterval(function () {
+
+            const now = new Date().getTime();
+
+
+            const timeRemaining = dueDate - now;
+
+
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+
+            document.getElementById('job3-countdown').innerHTML = `Time remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+
+            if (timeRemaining < 0) {
+                clearInterval(countdown);
+                document.getElementById('job3-countdown').innerHTML = 'Application closed';
+            }
+        }, 1000);
+    </script>
+
+
+</body>
+</html>
